@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Remédios</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=DM+Mono:wght@500&family=Hanken+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar" role="banner">
+    <div class="topbar-inner">
+      <div class="brand" aria-label="Remédios">
+        <svg width="34" height="34" viewBox="0 0 30 30" aria-hidden="true">
+          <g transform="rotate(-40 15 15)">
+            <rect x="2" y="8" width="26" height="14" rx="7" fill="#2F3CFF" />
+            <path d="M15 8h6a7 7 0 0 1 0 14h-6z" fill="#11131A" />
+          </g>
+        </svg>
+        <span class="brand-name">remédios</span>
+      </div>
+
+      <nav class="nav-tabs" aria-label="Principal">
+        <button class="nav-tab active" data-tab="hoje">Hoje</button>
+        <button class="nav-tab" data-tab="reducao">Redução</button>
+        <button class="nav-tab" data-tab="estoque">Estoque</button>
+        <button class="nav-tab" data-tab="alertas">Alertas</button>
+        <button class="nav-tab" data-tab="assistente">Assistente</button>
+      </nav>
+
+      <div class="header-right">
+        <div class="gamify-pill">
+          <div class="gamify-item" id="streak-pill" title="Dias seguidos">
+            <span class="badge-icon flame">🔥</span>
+            <span class="gamify-num" id="header-streak">12</span>
+          </div>
+          <span class="gamify-sep"></span>
+          <div class="gamify-item" title="1 escudo: protege a sequência">
+            <span class="badge-icon shield">🛡</span>
+            <span class="gamify-num">1</span>
+          </div>
+        </div>
+        <button class="more-btn" data-tab="ajustes" aria-label="Mais: Remédios, Ajustes" title="Mais / Ajustes">•••</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="app-main" class="container" role="main"></main>
+
+  <div id="modal-backdrop" class="modal-backdrop hidden" role="dialog" aria-modal="true">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3 id="modal-title">Detalhes</h3>
+        <button id="modal-close" class="btn-ghost" aria-label="Fechar">✕</button>
+      </div>
+      <div id="modal-body" class="modal-body"></div>
+      <div id="modal-footer" class="modal-footer"></div>
+    </div>
+  </div>
+
+  <script src="renderer.js"></script>
+</body>
+</html>
